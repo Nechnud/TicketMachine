@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Menu {
     StartYourJourney stationsAndDeparture = new StartYourJourney();
-    BuyTicket buyTicket = new BuyTicket();
+    TicketMachine ticketMachine = new TicketMachine();
+
     Scanner myScanner = new Scanner(System.in);
 
     public void mainMenu() throws InterruptedException {
@@ -16,7 +17,8 @@ public class Menu {
         switch (myScanner.nextInt()){
             case 1:
                 stationsAndDeparture.journeyStart();
-                buyTicket.buyingTicketsMenu();
+
+                mainMenu();
 
 
                 break;
@@ -30,12 +32,18 @@ public class Menu {
 
                 break;
             case 3:
-                System.out.println(stationsAndDeparture.getDepartureStation());
-                System.out.println(stationsAndDeparture.getArrivalStation());
+                ticketMachine.printTicket();
+                mainMenu();
                 break;
 
             case 4:
                 System.out.println("Have a nice day, bye!");
+                break;
+
+
+            case 5:
+
+
                 break;
 
 

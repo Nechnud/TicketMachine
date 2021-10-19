@@ -1,50 +1,38 @@
 import java.util.Scanner;
 
 public class BuyTicket {
-    int childAmount;
-    int studentAmount;
-    int adultAmount;
-    int pensionerAmount;
 
-    int childPrice = 13;
-    int studentPrice = 17;
+    int childPrice = 15;
+    int studentPrice = 18;
     int adultPrice = 25;
-    int pensionerPrice = 16;
-    Menu backToMaineMenu = new Menu();
-    StartYourJourney getDestinations = new StartYourJourney();
+    int pensionerPrice = 20;
+
+
+
     Scanner myScanner = new Scanner(System.in);
+        static int childAmount = 0;
+        static int studentAmount = 0;
+        static int adultAmount = 0;
+        static int pensionerAmount = 0;
 
-    public void buyingTicketsMenu() throws InterruptedException {
-        System.out.println("Your departure station: " + getDestinations.getDepartureStation());
-        System.out.println("Your arrival station: " + getDestinations.getArrivalStation());
-        System.out.println("Navigate the menu with numbers!");
-        System.out.println("1. Child ticket ");
-        System.out.println("2. Student ticket");
-        System.out.println("3. Adult ticket");
-        System.out.println("4. pensioner ticket");
-        System.out.println("5 Back to main menu.");
 
-        switch (myScanner.nextInt()) {
-            case 1 -> {
-                System.out.println(childAmount++);
-                buyingTicketsMenu();
+        public void amountOfTickets(){
+        System.out.println("Navigate with the numbers as presented.");
+        System.out.println("1. Child ticket 15 kr.");
+        System.out.println("2. Student ticket 18 kr.");
+        System.out.println("3. Adult ticket 25 kr.");
+        System.out.println("4. Pensioner ticket 20kr.");
+        System.out.println("5. If done, exit.");
+        boolean isRunning = true;
+        while (isRunning)
+            switch (myScanner.nextInt()) {
+                case 1 -> childAmount++;
+                case 2 -> studentAmount++;
+                case 3 -> adultAmount++;
+                case 4 -> pensionerAmount++;
+                case 5 -> isRunning = false;
             }
-            case 2 -> {
-                System.out.println(studentAmount++);
-                buyingTicketsMenu();
-            }
-            case 3 -> {
-                System.out.println(adultAmount++);
-                buyingTicketsMenu();
-            }
-            case 4 -> {
-                System.out.println(pensionerAmount++);
-                buyingTicketsMenu();
-            }
-            case 5 -> backToMaineMenu.mainMenu();
-        }
-
-
-
     }
+
+
 }
