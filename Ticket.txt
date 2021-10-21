@@ -1,3 +1,8 @@
-Time of purchase 19/10/2021 15:15:29
-You are departing from l
- Your destination is k
+Time of purchase 20/10/2021 20:53:58
+You are departing from Eslöv C
+ Your destination is Malmö C
+ Child Ticket: 1 
+ Student ticket: 0 
+ Adult Ticket: 0 
+ Pensioner ticket: 0 
+ Total:  15
